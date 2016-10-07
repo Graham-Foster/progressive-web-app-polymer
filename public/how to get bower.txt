@@ -1,0 +1,1 @@
+'from public, bower install -p polymerlabs/note-app' 
