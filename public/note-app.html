@@ -1,6 +1,7 @@
 <link rel="import" href="bower_components/note-app/common/note-app/na-elements.html">
 <link rel="import" href="bower_components/app-storage/app-indexeddb-mirror/app-indexeddb-mirror.html">
 <link rel="import" href="bower_components/polymerfire/polymerfire.html">
+<link rel="import" href="bower_components/paper-toggle-button/paper-toggle-button.html">
 
 <dom-module id="note-app">
   <template>
@@ -28,6 +29,7 @@
         disabled="[[!online]]"
         aria-label="Add note">
     </paper-fab>
+    <paper-toggle-button id="enable-push" toggles disabled>Toggle push notifications</paper-toggle-button>
     <na-editor
         id="editor"
         note="{{editableNote}}"
