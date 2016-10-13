@@ -29,7 +29,6 @@
         disabled="[[!online]]"
         aria-label="Add note">
     </paper-fab>
-    <paper-toggle-button id="enable-push" toggles disabled>Toggle push notifications</paper-toggle-button>
     <na-editor
         id="editor"
         note="{{editableNote}}"
@@ -53,6 +52,7 @@
         data="{{notes}}"
         persisted-data="{{persistedNotes}}">
     </app-indexeddb-mirror>
+    <paper-toggle-button id="enable-push" toggles disabled>Toggle push notifications</paper-toggle-button>
     <div class="notes">
       <template is="dom-repeat" items="[[persistedNotes]]" as="note">
         <na-note
@@ -62,6 +62,10 @@
             on-tap="edit">
         </na-note>
       </template>
+    </div>
+    <div id="subscription-container" style="visibility: hidden;">
+      Subscription ID:
+      <span id="subscription-id"></span>
     </div>
   </template>
   <script>
@@ -85,6 +89,9 @@
       get isEditable() {
         return this.online;
       }
+
     });
+
   </script>
+  <script src="enable-push.js"></script>
 </dom-module>
