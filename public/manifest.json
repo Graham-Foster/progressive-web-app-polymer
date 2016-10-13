@@ -6,6 +6,8 @@
   "orientation": "any",
   "theme_color": "#9C27B0",
   "background_color": "#9C27B0",
+  "gcm_sender_id": "635366960538",
+  "gcm_user_visible_only": true,
   
   "icons": [{
     "src": "bower_components/note-app/common/images/icon-0-75x.png",
